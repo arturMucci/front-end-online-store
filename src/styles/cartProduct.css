@@ -1,0 +1,22 @@
+.btn-iteration {
+  display: none;
+}
+
+.btn-remove {
+  background-color: inherit;
+  border: none;
+}
+
+.fa-minus, .minus {
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+/* .amount {
+
+} */
+
+.fa-plus, .plus {
+  cursor: pointer;
+  margin-left: 10px;
+}

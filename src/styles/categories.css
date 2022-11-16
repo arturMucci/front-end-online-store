@@ -1,0 +1,11 @@
+.categories-menu {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+
+.categories {
+  background-color: inherit;
+  border: none;
+
+}
