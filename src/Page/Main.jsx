@@ -112,13 +112,17 @@ class Main extends Component {
           <section className="products-container">
             <p
               data-testid="home-initial-message"
+              className="initialMessageDisplay"
               style={ { display: initialMessageDisplay } }
             >
               Digite algum termo de pesquisa ou escolha uma categoria.
             </p>
             { products.length ? <ul>{showProducts}</ul>
               : (
-                <p style={ { display: noProductsDisplay } }>
+                <p
+                  className="noProductsDisplay"
+                  style={ { display: noProductsDisplay } }
+                >
                   Nenhum produto foi encontrado
                 </p>
               )}
