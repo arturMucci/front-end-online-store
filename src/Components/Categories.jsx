@@ -7,6 +7,8 @@ export default class Categories extends Component {
     const { categories, fetchCategory } = this.props;
     return (
       <section className="categories-menu">
+        <h3>Categorias</h3>
+        <hr />
         {categories.map(({ name, id }) => (
           <button
             key={ id }

@@ -14,7 +14,7 @@ class ProductCard extends Component {
     const ConditionalLink = isCheckout ? React.Fragment : Link;
 
     return (
-      <span>
+      <span className="productCard-content">
         {freeShipping && <p data-testid="free-shipping">Frete Grátis!</p>}
         <ConditionalLink to={ `/productdetails/${id}` } data-testid="product-detail-link">
           <div data-testid="product">
