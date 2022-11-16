@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-
 import '../styles/main.css';
-import logo from '../images/logo.png';
 
 import Categories from '../Components/Categories';
 import { getCategories, getProductsFromCategoryAndQuery } from '../services/api';
 import ProductCard from '../Components/ProductCard';
+import Navbar from '../Components/Navbar';
 
 class Main extends Component {
   state = {
@@ -100,41 +98,12 @@ class Main extends Component {
     const noProductsDisplay = products.length ? 'block' : 'none';
     return (
       <>
-        <header className="header-content">
-          <form className="form-search">
-            <label htmlFor="home-initial-message">
-              <input
-                className="search-input"
-                onChange={ this.handleChange }
-                placeholder="Digite o que você busca"
-                value={ inputSearch }
-                type="text"
-                id="home-initial-message"
-                data-testid="query-input"
-              />
-              <input
-                className="searchButton"
-                type="button"
-                data-testid="query-button"
-                onClick={ this.productsAPI }
-              />
-            </label>
-          </form>
-          <div className="logo-content">
-            <img className="logo" alt="logo" src={ logo } />
-          </div>
-          <div className="cart-button">
-            <Link to="/cart" data-testid="shopping-cart-button">
-              <p
-                className="cart-counter"
-                data-testid="shopping-cart-size"
-              >
-                { cart.length }
-              </p>
-              <i className="fa-solid fa-cart-shopping" />
-            </Link>
-          </div>
-        </header>
+        <Navbar
+          handleChange={ this.handleChange }
+          inputSearch={ inputSearch }
+          productsAPI={ this.productsAPI }
+          cart={ cart }
+        />
         <main className="main-content">
           <Categories
             categories={ categories }

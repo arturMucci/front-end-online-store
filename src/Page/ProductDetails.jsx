@@ -1,9 +1,9 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import '../styles/productDetails.css';
 import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import { getProductById } from '../services/api';
+import Navbar from '../Components/Navbar';
+import '../styles/productDetails.css';
 
 export default class ProductDetails extends Component {
   state = {
@@ -51,7 +51,10 @@ export default class ProductDetails extends Component {
 
     return (
       <div className="prodDetail-container">
-        <nav className="nav-content">
+        <Navbar
+          cart={ cart }
+        />
+        {/* <nav className="nav-content">
           <div className="cart-button">
             <Link to="/cart" data-testid="shopping-cart-button">
               <p
@@ -63,7 +66,7 @@ export default class ProductDetails extends Component {
               <i className="fa-solid fa-cart-shopping" />
             </Link>
           </div>
-        </nav>
+        </nav> */}
         {freeShipping && <p data-testid="free-shipping">Frete Grátis!</p>}
         <h4 data-testid="product-detail-name">{ title }</h4>
         <img data-testid="product-detail-image" src={ thumbnail } alt={ title } />
