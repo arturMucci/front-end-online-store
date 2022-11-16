@@ -27,14 +27,14 @@
 }
 
 .searchButton {
+  align-self: center;
   background: url('../images/btnSearch.png') no-repeat;
   background-size: 15px;
-  width: 17px;
   border: none;
-  align-self: center;
   color: rgba(0, 0, 0, 0);
   cursor: pointer;
   margin-left: -20px;
+  width: 17px;
 }
 
 .logo-content {
