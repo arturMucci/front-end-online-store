@@ -54,34 +54,27 @@ export default class ProductDetails extends Component {
         <Navbar
           cart={ cart }
         />
-        {/* <nav className="nav-content">
-          <div className="cart-button">
-            <Link to="/cart" data-testid="shopping-cart-button">
-              <p
-                className="cart-counter"
-                data-testid="shopping-cart-size"
-              >
-                { cart.length }
-              </p>
-              <i className="fa-solid fa-cart-shopping" />
-            </Link>
+        <div className="product-detail-content">
+          <div className="product-title-content">
+            <h4 data-testid="product-detail-name">{ title }</h4>
+            <img data-testid="product-detail-image" src={ thumbnail } alt={ title } />
+            {freeShipping && <p data-testid="free-shipping">Frete Grátis!</p>}
           </div>
-        </nav> */}
-        {freeShipping && <p data-testid="free-shipping">Frete Grátis!</p>}
-        <h4 data-testid="product-detail-name">{ title }</h4>
-        <img data-testid="product-detail-image" src={ thumbnail } alt={ title } />
-        <p data-testid="product-detail-price">
-          { price }
-        </p>
-        <button
-          data-testid="product-detail-add-to-cart"
-          id="button-add-to-cart"
-          name="button-add-to-cart"
-          type="button"
-          onClick={ this.addToCart }
-        >
-          Adicionar ao carrinho
-        </button>
+          <div className="product-info-content">
+            <p data-testid="product-detail-price">
+              { price }
+            </p>
+            <button
+              data-testid="product-detail-add-to-cart"
+              id="button-add-to-cart"
+              name="button-add-to-cart"
+              type="button"
+              onClick={ this.addToCart }
+            >
+              Adicionar ao carrinho
+            </button>
+          </div>
+        </div>
       </div>
 
     );

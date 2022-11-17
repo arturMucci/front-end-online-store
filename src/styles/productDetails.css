@@ -1,3 +1,30 @@
 .prodDetail-container {
   text-align: center;
 }
+
+.product-detail-content {
+  display: flex;
+}
+
+.product-title-content {
+  border: 1px solid saddlebrown;
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+  max-height: 800px;
+  max-width: 500px;
+  width: 40%;
+}
+
+/* Elemento se ajusta no tamanho da imagem, tem que arrumar isso */
+.product-title-content > img {
+  height: 100%;
+  width: 100%;
+}
+
+.product-info-content {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+  margin: 50px;
+}
